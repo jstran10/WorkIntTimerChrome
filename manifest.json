@@ -1,0 +1,33 @@
+
+
+  {
+    "name": "Work Interval Timer",
+    "description": "Helps to block distracting websites during alternating periods of work and break! Based on the Pomodoro Technique",
+    "manifest_version": 2,
+    "version": "2.0.0",
+    "web_accessible_resources": ["images/*.jpg"],
+    "author": "jasonstranne@gmail.com",
+
+    "permissions" : ["management","background",
+        "webRequest", "tabs", "webRequestBlocking",
+    "*://www.sakai.duke.edu.com/*",
+    "*://www.netflix.com/*",
+    "*://en.wikipedia.org/*"
+  ],
+     "icons": {
+    "16": "clockpossiblelogo.png",
+    "48": "clockpossiblelogo.png",
+    "128": "clockpossiblelogo.png"
+  },
+   
+    "browser_action": {
+      "default_title": "Work Interval Timer",
+      "default_icon": "clockpossiblelogo.png",
+    "default_popup": "options.html"
+    },
+      "background": {
+        "matches": ["*://*/*"],
+        "scripts":["timer.js","buttonscript.js","options.html"],
+        "persistent": true
+}
+ }
