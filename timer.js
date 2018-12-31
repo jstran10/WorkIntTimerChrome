@@ -26,7 +26,7 @@ document.addEventListener('check',
  );
 
 function checktabs(item){
-	chrome.tabs.update(item.id,{url:"http://en.wikipedia.org"})
+	chrome.tabs.update(item.id,{url:"http://www.google.com"})
 	//alert(item.index);
 }
 function Update() {
